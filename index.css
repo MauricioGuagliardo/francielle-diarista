@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1, h2, h4 {
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+}
+
+header {
+    background: linear-gradient(to right, #007bff, #0056b3);
+}
+
+footer {
+    background: #222;
+    color: white;
+}
+
+section img {
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.btn-success {
+    font-size: 20px;
+    padding: 10px 20px;
+}
