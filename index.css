@@ -1,8 +1,8 @@
 /* Estilização Geral */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #F4EAE0; /* Fundo bege elegante */
-    color: #1F3C88; /* Azul escuro para textos */
+    background-color: #F4EAE0;
+    color: #1F3C88;
     margin: 0;
     padding: 0;
 }
@@ -17,7 +17,7 @@ header {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Botão do WhatsApp */
+/* Botão do WhatsApp centralizado na parte inferior */
 .whatsapp-btn {
     display: flex;
     align-items: center;
@@ -34,6 +34,9 @@ header {
     transition: all 0.3s ease-in-out;
     border: none;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto; /* Centraliza corretamente */
+    display: block;
+    text-align: center;
 }
 
 .whatsapp-btn:hover {
@@ -63,6 +66,7 @@ header {
     color: #333;
 }
 
+
 /* Melhorando o Formulário */
 form {
     background: white;
@@ -79,6 +83,17 @@ form input, form select {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+
+/* Efeito de foco nos inputs */
+form input:focus, form select:focus {
+    border-color: #1F3C88;
+    box-shadow: 0 0 5px rgba(31, 60, 136, 0.5);
+    outline: none;
+}
+
+.highlight-box:hover {
+    transform: scale(1.05);
 }
 
 /* Melhorias para Celulares */
