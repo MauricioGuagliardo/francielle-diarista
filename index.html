@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Francielle Diarista - Agendamento por Horas</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header class="bg-primary text-white text-center p-4">
+    <h1>Agendamento de Limpeza por Horas</h1>
+    <p>Agende seu atendimento por hora</p>
+  </header>
+
+  <!-- Formulário de Agendamento -->
+  <section class="container my-5 text-center">
+    <h2>Agende seu atendimento</h2>
+    <p>Escolha a data e o horário e informe seus dados.</p>
+    <form id="agendamento-form">
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome Completo:</label>
+        <input type="text" id="nome" class="form-control" placeholder="Digite seu nome completo" required>
+      </div>
+      <div class="mb-3">
+        <label for="telefone" class="form-label">Seu WhatsApp:</label>
+        <input type="tel" id="telefone" class="form-control" placeholder="(DDD) 99999-9999" required>
+      </div>
+      <div class="mb-3">
+        <label for="data" class="form-label">Escolha a Data:</label>
+        <input type="date" id="data" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="hora" class="form-label">Escolha o Horário:</label>
+        <select id="hora" class="form-control" required></select>
+      </div>
+      <button type="button" class="whatsapp-btn" onclick="enviarWhatsApp()">
+        <span class="whatsapp-icon">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </span>
+        Confirmar Agendamento
+      </button>
+    </form>
+  </section>
+
+  <!-- Painel Administrativo -->
+  <section id="painel-admin" class="container my-5" style="display: none;">
+    <h2>Horários Reservados</h2>
+    <p>Aqui, você pode liberar horários que os clientes não confirmaram.</p>
+    <ul id="lista-horarios-reservados"></ul>
+  </section>
+
+  <!-- Botão de Acesso Administrativo -->
+  <section class="container text-center my-5">
+    <button onclick="autenticarDiarista()" class="admin-btn">Acesso Administrativo</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
